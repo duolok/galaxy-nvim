@@ -23,7 +23,6 @@ local function set_keymap()
 
 	-- Supported by nvim-tree
 	map("n", keys.file_explorer, ":Neotree position=left source=filesystem action=show toggle=true<CR>", option)
-	map("n", keys.git_status, ":Neotree position=float source=git_status action=show toggle=true<CR>", option)
 
 	-- Supported by aerial
 	map("n", keys.outline, ":AerialToggle! right<CR>", option)
