@@ -1,4 +1,4 @@
-![galaxy_banner](https://github.com/duolok/galaxy-nvim/assets/42711489/0d89a716-65ba-48e5-bb45-be6a88cc82a6)![galaxy_banner](https://github.com/duolok/galaxy-nvim/assets/42711489/2a8de529-40cc-4690-8537-25ed2fc75c08)
+![galaxy_banner](https://github.com/duolok/galaxy-nvim/assets/42711489/0d89a716-65ba-48e5-bb45-be6a88cc82a6)
 <h1 align="center"> galaxy.nvim </h1>
 
 Galaxy.nvim is my Neovim configuration that offers a seamless and delightful text editing experience.
