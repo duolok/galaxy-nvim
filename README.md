@@ -16,8 +16,8 @@ Before you get started with galaxy.nvim, make sure you have the following prereq
 Clone the galaxy.nvim repository and navigate into the directory:
 
 ```shell
-    git clone git@github.com:duolok/galaxy-nvim.git
-    cd galaxy-nvim
+git clone git@github.com:duolok/galaxy-nvim.git
+cd galaxy-nvim
 ```
 
 Next, choose your preferred installation method:
