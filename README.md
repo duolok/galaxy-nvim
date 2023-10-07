@@ -1,4 +1,4 @@
-![galaxy_banner](https://github.com/duolok/nvim/assets/42711489/a60f1fb8-f12a-46f6-84e1-f12d2129d9f1)
+![galaxy_banner](https://github.com/duolok/galaxy-nvim/assets/42711489/0d89a716-65ba-48e5-bb45-be6a88cc82a6)![galaxy_banner](https://github.com/duolok/galaxy-nvim/assets/42711489/2a8de529-40cc-4690-8537-25ed2fc75c08)
 <h1 align="center"> galaxy.nvim </h1>
 
 Galaxy.nvim is my Neovim configuration that offers a seamless and delightful text editing experience.
@@ -42,9 +42,9 @@ That's it! You're ready to enjoy galaxy.nvim.
 
 
 #### Preview
-![landing_screen](https://github.com/duolok/nvim/assets/42711489/0359fefd-bb4e-497d-9b16-a419555bfeaa)
-![search](https://github.com/duolok/nvim/assets/42711489/d33d950b-17af-4d29-b474-03a6a99d7d37)
-![workflow](https://github.com/duolok/nvim/assets/42711489/0d386893-98d3-4f26-b98c-3c233b2e763e)
+![landing_screen](https://github.com/duolok/galaxy-nvim/assets/42711489/f5ff453d-33ad-4103-b11d-e25cca3a1bdb)
+![workflow](https://github.com/duolok/galaxy-nvim/assets/42711489/929e4fd7-1cfe-43f1-b00d-e8af1f65b9b3)
+![search](https://github.com/duolok/galaxy-nvim/assets/42711489/8d0bf113-ea38-4c3e-a600-0852700cb266)
 
 
 ### Features
