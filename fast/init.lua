@@ -180,6 +180,12 @@ vim.keymap.set("n", "<leader>gp", ":Git push")
 -- Undo Tree
 vim.keymap.set('n', '<leader>y', vim.cmd.UndotreeToggle)
 
+-- Global Replace
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Exec
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
 -- Yank Highlight
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {

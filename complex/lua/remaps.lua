@@ -29,3 +29,9 @@ vim.keymap.set("n", keys.git_push, ":Git push")
 
 -- [[ UNDO TREE ]] -- 
 vim.keymap.set('n', keys.ut_open, vim.cmd.UndotreeToggle)
+
+-- [[ GLOBAL REPLACE ]]
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- [[ EXEC ]]
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
