@@ -80,6 +80,10 @@ return function()
 				},
 				opts = { skip = true },
 			},
+			{
+				view = "notify",
+				filter = { event = "msg_showmode" },
+			},
 		},
 	})
 end
