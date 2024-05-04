@@ -1,4 +1,4 @@
--- [[ GALAXY NVIM - COMPLEX ]] --
+ -- [[ GALAXY NVIM - COMPLEX ]] --
 -- Advanced version for more configured text editing.
 require("basic")
 
@@ -16,6 +16,8 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = require("custom_keys").leader
 vim.g.maplocalleader = " "
+vim.g.netrw_banner = 0
+vim.g.netrww_winsize = 25
 
 require("lazy").setup({
 	spec = { { import = "plugins" }, },
