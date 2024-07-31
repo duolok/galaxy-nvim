@@ -50,17 +50,6 @@ return {
 	--	end,
 	--},
 
-	-- [[ CMD LINE ]] --
-	{
-		"folke/noice.nvim",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-		},
-		config = function()
-			require("plugins/noice/config")()
-		end,
-	},
-
 	-- [[ UI ]] -- 
 	{
 		"stevearc/dressing.nvim",
