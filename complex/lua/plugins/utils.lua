@@ -15,6 +15,8 @@ return {
 	-- [[ UNDO TREE]] --
 	{ "mbbill/undotree" },
 
+	{"ThePrimeagen/vim-be-good"},
+
 	-- [[ SESSION ]] -- 
 	{
 		"Shatur/neovim-session-manager",
@@ -54,11 +56,12 @@ return {
 			window = {
 				backdrop = 1, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
 				height = 1, -- height of the Zen window
+				width = 120,
 				options = {
 					signcolumn = "no", -- disable signcolumn
-					number = false, -- disable number column
-					relativenumber = false, -- disable relative numbers
-					cursorline = false, -- disable cursorline
+					number = true, -- disable number column
+					relativenumber = true, -- disable relative numbers
+					cursorline = true, -- disable cursorline
 					cursorcolumn = false, -- disable cursor column foldcolumn = "0", -- disable fold column
 					list = false, -- disable whitespace characters
 				},
