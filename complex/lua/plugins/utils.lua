@@ -15,6 +15,9 @@ return {
 	-- [[ UNDO TREE]] --
 	{ "mbbill/undotree" },
 
+	-- [[ COMMENT NVIM ]] --
+	{ 'numToStr/Comment.nvim', opts = { } },
+
 	{"ThePrimeagen/vim-be-good"},
 
 	-- [[ SESSION ]] -- 
