@@ -15,7 +15,19 @@ return {
             vim.keymap.set('n', keys.find_files, builtin.find_files, option)
             vim.keymap.set('n', keys.live_grep, builtin.live_grep, option)
             vim.keymap.set('n', keys.search_cursor, builtin.grep_string, option)
-            vim.keymap.set('n', keys.find_buffer, builtin.buffers, option)vim.keymap.set('n', '<leader>fl', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
+            vim.keymap.set('n', keys.find_buffer, builtin.buffers, option)
+            vim.keymap.set('n', '<leader>fl', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
+
+            vim.keymap.set('n', '<leader>fj', function()
+                builtin.live_grep({
+                    prompt_title = "Deep Search",
+                    find_command = {'rg', '--files', '--hidden', '--follow', '--no-ignore'},
+                    additional_args = function(opts)
+                        return {"--hidden", "--no-ignore", "--follow", "--smart-case"}
+                    end
+                })
+            end, { desc = 'Deep search all files' })
+
 
             vim.keymap.set('n', '<leader>fa', function()
               -- You can pass additional configuration to telescope to change theme, layout, etc.
