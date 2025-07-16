@@ -24,6 +24,8 @@ require("lazy").setup({
 	ui = { border = "rounded", }, change_detection = { enabled = true, },
 })
 
+vim.deprecate = function() end
+
 -- [[ CONFIG ]] -- 
 require("remaps")
 require("core")
