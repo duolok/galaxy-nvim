@@ -1,14 +1,14 @@
 return {
 	-- [[ AUTO-PAIRS ]] -- 
-	{
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({
-				enable_check_bracket_line = false,
-				ignored_next_char = "[%w%.]", -- will ignore alphanumeric and `.` symbol
-			})
-		end,
-	},
+	-- {
+	-- 	"windwp/nvim-autopairs",
+	-- 	config = function()
+	-- 		require("nvim-autopairs").setup({
+	-- 			enable_check_bracket_line = false,
+	-- 			ignored_next_char = "[%w%.]", -- will ignore alphanumeric and `.` symbol
+	-- 		})
+	-- 	end,
+	-- },
 
 	-- [[ AUTO COMPLETION ]] -- 
 	{
