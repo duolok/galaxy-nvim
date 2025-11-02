@@ -60,4 +60,7 @@ return {
 	lsp_rename = "<leader>re",
 	-- Use the shortcut to format your codes.
 	format = "<leader>ft",
+
+	-- be cool use norm
+	norm_mode = "<leader>n"
 }

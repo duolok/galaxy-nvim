@@ -13,6 +13,8 @@ local function set_keymap()
 	map("n", keys.jump_up_window, "<C-W>k", option)
 	map("n", keys.jump_right_window, "<C-W>l", option)
 
+	map({ "n", "v", "x" }, keys.norm_mode, ":norm ", { desc = "ENTER NORM COMMAND." })
+
 	vim.cmd([[ nnoremap <silent> <Esc> :nohlsearch<CR>:echo<CR> ]])
 
 	-- Supported by bufdelete
