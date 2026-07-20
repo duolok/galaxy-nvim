@@ -119,7 +119,14 @@ local function save_on_quit()
 end
 
 -- Set up auto command
-local function set_autocmd() end
+local function set_autocmd()
+	vim.api.nvim_create_autocmd("FileType", {
+		pattern = { "yaml", "helm" },
+		callback = function(args)
+			vim.diagnostic.enable(false, { bufnr = args.buf })
+		end,
+	})
+end
 
 set_keymap()
 set_transparency()

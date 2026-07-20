@@ -44,8 +44,8 @@ return {
 			vim.cmd([[
 			autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
 			autocmd User AlphaReady set laststatus=0 | autocmd BufUnload <buffer> set laststatus=3
-			autocmd User AlphaReady :NeoTreeClose
-			autocmd User AlphaReady :AerialCloseAll
+			autocmd User AlphaReady silent! NeoTreeClose
+			autocmd User AlphaReady silent! AerialCloseAll
 			]])
 		end,
 	},

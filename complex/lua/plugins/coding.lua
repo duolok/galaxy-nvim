@@ -21,7 +21,17 @@ return {
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },
 	{ "hrsh7th/cmp-cmdline" },
-	{ "L3MON4D3/LuaSnip" }, -- install the LuaSnip engine
+	{
+		"L3MON4D3/LuaSnip",
+		config = function()
+			local ls = require("luasnip")
+			ls.filetype_extend("helm", { "yaml" })
+			require("luasnip.loaders.from_lua").lazy_load({
+				paths = vim.fn.stdpath("config") .. "/snippets",
+			})
+		end,
+	},
+	{ "saadparwaiz1/cmp_luasnip" }, -- luasnip source for nvim-cmp
 	{ "onsails/lspkind.nvim" }, -- icons in autocomplete source
 	{
 		"folke/todo-comments.nvim",

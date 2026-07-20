@@ -1,26 +1,12 @@
--- [[ COMPLETE UI SETTINGS ]] -- 
+-- [[ COMPLETE UI SETTINGS ]] --
 
 return {
-	-- [[ STATUS LINE ]] -- 
+	-- [[ STATUS LINE ]] --
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons", opt = true },
 		config = function()
 			require("plugins/lualine/config")()
-		end,
-	},
-
-	-- [[ FILE EXPLORER ]] -- 
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v2.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
-		},
-		config = function()
-			require("plugins/neo-tree/config")()
 		end,
 	},
 
@@ -50,11 +36,36 @@ return {
 	--	end,
 	--},
 
-	-- [[ UI ]] -- 
+	-- [[ UI ]] --
 	{
 		"stevearc/dressing.nvim",
 		opts = {},
 	},
 
-	{ 'xiyaowong/transparent.nvim' }
+	{
+		"xiyaowong/transparent.nvim",
+		lazy = false,
+		config = function()
+			require("transparent").setup({
+				extra_groups = {
+					"NormalFloat",
+					"NeoTreeNormal",
+					"NeoTreeNormalNC",
+					"NeoTreeEndOfBuffer",
+					"TelescopeNormal",
+					"TelescopeBorder",
+					"WhichKeyFloat",
+					"ZenBg",
+				},
+				exclude_groups = { "CursorLine", "CursorLineNr" },
+			})
+			vim.g.transparent_enabled = true
+
+			vim.api.nvim_create_autocmd("ColorScheme", {
+				callback = function()
+					pcall(vim.cmd, "TransparentClear")
+				end,
+			})
+		end,
+	},
 }

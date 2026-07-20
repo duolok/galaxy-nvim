@@ -13,7 +13,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
 -- [[ FILE MANAGER ]] --
-vim.keymap.set("n", keys.ex_explorer, vim.cmd.Ex)
+-- oil.nvim hijacks netrw, so :Ex no longer exists. Route the galaxy
+-- ex_explorer key (<C-n>) to :Oil instead.
+vim.keymap.set("n", keys.ex_explorer, "<Cmd>Oil<CR>")
 -- [[ CLIPBOARD ]] -- 
 vim.keymap.set("x", "<leader>p", "\"_dP")
 

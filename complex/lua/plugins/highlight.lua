@@ -3,10 +3,15 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
+		branch = "master",                  -- legacy API used below
+		build = ":TSUpdate",
+		dependencies = {
+			{ "nvim-treesitter/nvim-treesitter-textobjects", branch = "master" },
+		},
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				-- Add languages to be installed here that you want installed for treesitter
-				ensure_installed = { 'c', 'cpp', 'go', 'python', 'rust', 'tsx', 'typescript', 'vim' },
+				ensure_installed = { 'c', 'cpp', 'go', 'python', 'rust', 'tsx', 'typescript', 'vim', 'yaml', 'helm' },
 				auto_install = false,
 				highlight = { enable = true },
 				indent = { enable = true },
@@ -67,6 +72,9 @@ return {
 			)
 		end,
 	},
+	-- Helm filetype detection (charts/**/templates/*.yaml -> filetype=helm)
+	{ "towolf/vim-helm", ft = { "helm" } },
+
 	-- Colors highlighting
 	{
 		"NvChad/nvim-colorizer.lua",

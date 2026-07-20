@@ -47,7 +47,7 @@ return {
 				pattern = "SessionLoadPost",
 				group = hardhacker_config_group,
 				callback = function()
-					vim.api.nvim_command("Neotree position=left source=filesystem action=show")
+					pcall(vim.api.nvim_command, "Neotree position=left source=filesystem action=show")
 				end,
 			})
 		end,
@@ -69,7 +69,9 @@ return {
 					list = false, -- disable whitespace characters
 				},
 			},
-			on_open = function(win) end,
+			on_open = function(win)
+				vim.api.nvim_set_hl(0, "ZenBg", { bg = "NONE", ctermbg = "NONE" })
+			end,
 			on_close = function() end,
 		},
 	},
